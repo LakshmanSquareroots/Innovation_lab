@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 20px;
+    background-color: #030303;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+}
+
+.header {
+    background-color: #00262d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+h1 {
+    color: #beee4a;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    align-items: start;
+}
+
+.left-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.controls-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.right-grid {
+    height: 100%;
+}
+
+.image-box {
+    width: 100%;
+    height: 470px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.right-grid .image-box {
+    height: calc(450px + 60px + 20px); /* Matches height of upload image + dropdown/button row */
+}
+
+.image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+    object-fit: contain;
+}
+
+.upload-symbol {
+    font-size: 24px;
+    color: #888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.upload-symbol:hover {
+    color: #555;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button {
+    background-color: #00262d;
+    color: #beee4a;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 30%;
+    cursor: pointer;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.warning {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.loading-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1000;
+    display: none;
+}

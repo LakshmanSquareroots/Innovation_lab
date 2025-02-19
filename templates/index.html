@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNOVATION LAB</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="static/logo.png" alt="Logo" class="logo">
+            <h1>INNOVATION LAB</h1>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="grid-container">
+            <div class="left-grid">
+                <div class="image-box" onclick="document.getElementById('image-upload').click();">
+                    <div class="upload-symbol" id="upload-symbol">
+                        <span>&#x1F4CE;</span>
+                        <span>Click to Upload Image</span>
+                    </div>
+                    <img id="uploaded-image" alt="Uploaded Image">
+                    <input type="file" id="image-upload" accept="image/*" onchange="handleImageUpload(event)">
+                </div>
+                <div class="controls-container">
+                    <select id="model-selection">
+                        <option value="select-model">Select Model</option>
+                        <option value="YOLO">Object Detection</option>
+                        <option value="FaceDetection">Face Detection</option>
+                        <option value="LabelReading">Label Reading</option>
+                      </select>
+                    <button onclick="processImage()">Run Detection</button>
+                </div>
+            </div>
+
+            <div class="right-grid">
+                <div class="image-box">
+                    <div class="upload-symbol" id="processed-symbol">
+                        <span>Processed Image Will Appear Here</span>
+                    </div>
+                    <img id="processed-image" alt="Processed Image">
+                </div>
+            </div>
+        </div>
+
+        <div id="warning-text" class="warning"></div>
+        <div id="loading-popup" class="loading-popup">Processing Image...</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Flask
+opencv-python-headless
+Flask-Cors
+Flask-RESTful
+ultralytics
+gunicorn
