@@ -1,4 +1,5 @@
 Flask
+opencv-python-headless
 azure-storage-blob
 Flask-Cors
 Flask-RESTful
