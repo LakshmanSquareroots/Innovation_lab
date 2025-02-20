@@ -61,5 +61,5 @@ class ModelClass(Resource):
 api.add_resource(ModelClass, "/ModelClass/<modelName>/")
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 80))  # Use port from environment, default to 8000
+    port = int(os.environ.get("PORT", 8000))  # Use port from environment, default to 8000
     app.run(host="0.0.0.0", port=port, debug=True)
